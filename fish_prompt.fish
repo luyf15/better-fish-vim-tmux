@@ -65,3 +65,8 @@ function fish_prompt --description 'Write out the prompt'
 
     echo -n -s [(set_color $fish_color_user) "$USER" $normal ] $normal ' ' (set_color $color_cwd) (echo $PWD | sed -e "s|^$HOME|~|") $normal (__fish_vcs_prompt) $normal $prompt_status $suffix " "
 end
+
+# execute last command with sudo
+function sdl
+    eval command sudo $history[1]
+end
