@@ -1,6 +1,6 @@
 # better-fish-vim-tmux
 
-tmux配置文件和vim插件，提高终端环境的使用体验和开发效率
+fish,tmux配置文件和vim插件，提高终端环境的使用体验和开发效率
 
 ## 安装
 
