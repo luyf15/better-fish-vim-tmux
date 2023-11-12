@@ -1,15 +1,15 @@
 #!/usr/bin/env bash
 
-set -e
+set -euxo
 
-if ["$(which fish)" == ""]; then
+if [ "$(which fish)" == "" ]; then
     echo "No fish found!"
     exit 1
 else
     fish="$(which fish)"
 fi
 
-if [$SHELL != ${fish}]; then
+if [ "$SHELL" != ${fish} ]; then
     echo "chsh $USER -s ${fish}"
     chsh $USER -s ${fish}
 fi
