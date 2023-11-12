@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -euxo
+set -euo
 
 if [ "$(which fish)" == "" ]; then
     echo "No fish found!"
@@ -15,17 +15,17 @@ if [ "$SHELL" != ${fish} ]; then
 fi
 
 if [ "$(uname)" == "Darwin" ]; then
-    echo "cp tmux.conf.mac ~/.tmux.conf"
-    cp tmux.conf.mac ~/.tmux.conf
-    echo "cp -r .vim* ~/"
-    cp -r .vim* /Users/lilong4/workspace/github/tmp
+    echo "cp --parents -u tmux.conf.mac ~/.tmux.conf"
+    cp --parents -u tmux.conf.mac ~/.tmux.conf
+    echo "cp --parents -u -r .vim* ~/"
+    cp --parents -u -r .vim* /Users/${USER}/workspace/github/tmp
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
-    echo "cp tmux.conf.linux ~/.tmux.conf"
-    cp tmux.conf.linux ~/.tmux.conf
-    echo "cp fish_prompt.fish ~/.config/fish/functions/fish_prompt.fish"
-    cp fish_prompt.fish ~/.config/fish/functions/fish_prompt.fish
-    echo "cp -r .vim* ~/"
-    cp -r .vim* ~
+    echo "cp --parents -u tmux.conf.linux ~/.tmux.conf"
+    cp --parents -u tmux.conf.linux ~/.tmux.conf
+    echo "cp --parents -u fish_prompt.fish ~/.config/fish/functions/fish_prompt.fish"
+    cp --parents -u fish_prompt.fish ~/.config/fish/functions/fish_prompt.fish
+    echo "cp -r --parents -u .vim* ~/"
+    cp -r --parents -u .vim* ~
 else
     echo "Other system, do nothing"
 fi
