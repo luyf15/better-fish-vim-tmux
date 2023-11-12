@@ -22,8 +22,8 @@ if [ "$(uname)" == "Darwin" ]; then
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
     echo "cp -u tmux.conf.linux ~/.tmux.conf"
     cp -u tmux.conf.linux ~/.tmux.conf
-    echo "cp --parents -u fish_prompt.fish ~/.config/fish/functions/fish_prompt.fish"
-    cp --parents -u fish_prompt.fish ~/.config/fish/functions/fish_prompt.fish
+    echo "cp -u fish_prompt.fish ~/.config/fish/functions/fish_prompt.fish"
+    cp -u fish_prompt.fish ~/.config/fish/functions/fish_prompt.fish
     echo "cp -r --parents -u .vim* ~/"
     cp -r --parents -u .vim* ~
 else
