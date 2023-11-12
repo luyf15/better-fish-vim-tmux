@@ -15,8 +15,8 @@ if [ "$SHELL" != ${fish} ]; then
 fi
 
 if [ "$(uname)" == "Darwin" ]; then
-    echo "cp --parents -u tmux.conf.mac ~/.tmux.conf"
-    cp --parents -u tmux.conf.mac ~/.tmux.conf
+    echo "cp -u tmux.conf.mac ~/.tmux.conf"
+    cp -u tmux.conf.mac ~/.tmux.conf
     echo "cp --parents -u -r .vim* ~/"
     cp --parents -u -r .vim* /Users/${USER}/workspace/github/tmp
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
