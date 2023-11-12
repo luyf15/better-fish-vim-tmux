@@ -10,7 +10,7 @@ else
 fi
 
 if [$SHELL != $FISH]; then
-    chsh $USER $FISH
+    chsh $USER -s $FISH
 fi
 
 if [ "$(uname)" == "Darwin" ]; then
