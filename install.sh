@@ -2,6 +2,17 @@
 
 set -e
 
+if ["$(which fish)" == ""]; then
+    echo "No fish found!"
+    exit 1
+else
+    FISH="$(which fish)"
+fi
+
+if [$SHELL != $FISH]; then
+    chsh $USER $FISH
+fi
+
 if [ "$(uname)" == "Darwin" ]; then
     echo "cp tmux.conf.mac ~/.tmux.conf"
     cp tmux.conf.mac ~/.tmux.conf
