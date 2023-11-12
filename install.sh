@@ -6,11 +6,12 @@ if ["$(which fish)" == ""]; then
     echo "No fish found!"
     exit 1
 else
-    FISH="$(which fish)"
+    fish="$(which fish)"
 fi
 
-if [$SHELL != $FISH]; then
-    chsh $USER -s $FISH
+if [$SHELL != ${fish}]; then
+    echo "chsh $USER -s ${fish}"
+    chsh $USER -s ${fish}
 fi
 
 if [ "$(uname)" == "Darwin" ]; then
