@@ -1,10 +1,10 @@
-# better-fish-vim-tmux
+# better-shell(zsh-vim-tmux)
 
-fish,tmux配置文件和vim插件，提高终端环境的使用体验和开发效率
+zsh,tmux配置文件和vim插件，提高终端环境的使用体验和开发效率
 
 ## 安装
 
-直接运行 `install.sh` 脚本进行安装，该脚本将tmux配置文件拷贝到 ~/.tmux.conf，将 .vim* 拷贝到 ~ 目录
+直接运行 `install.sh` 脚本进行安装。若考虑将zsh配置全局应用则需要给予root/sudo权限
 
 ```shell
 ./install.sh
@@ -13,6 +13,8 @@ fish,tmux配置文件和vim插件，提高终端环境的使用体验和开发�
 ## 使用
 
 [fish终端教程]()
+
+[zsh终端教程]()
 
 [tmux教程]()
 
